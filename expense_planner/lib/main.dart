@@ -25,15 +25,15 @@ class MyHomePage extends StatelessWidget {
         title: Text('Expense Planner'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Card(
             color: Colors.blue,
-            child: Container(
-              child: Text('Chart'),
-              width: double.infinity,
-            )
+            child: Text('Chart'),
           ),
           Card(
+            color: Colors.red,
             child: Text('List of Transactions')
           )
         ],

@@ -47,10 +47,15 @@ class MyHomePage extends StatelessWidget {
             color: Colors.blue,
             child: Text('Chart'),
           ),
-          Card(
-            color: Colors.red,
-            child: Text('List of Transactions')
-          )
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: transactions.map((tx) {
+              return Card(
+                color: Colors.red,
+                child: Text(tx.title)
+              );
+            }).toList(),
+          ),
         ],
       ),
     );
